@@ -1,6 +1,6 @@
 package models;
 
-public class PessoaFisica extends Pessoa {
+public abstract class PessoaFisica extends Pessoa {
   private String cpf;
   private String nome;
   private String dataNascimento;

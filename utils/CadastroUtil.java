@@ -20,14 +20,14 @@ public class CadastroUtil {
       default:
       return;
     }
-        try {
+      try {
         Path path = Paths.get(filePath);
-        if (!Files.exists(path)) Files.createFile(path);
+      if (!Files.exists(path)) Files.createFile(path);
         Files.write(path, object.toString().getBytes(), StandardOpenOption.APPEND);
         System.out.println("Cadastro realizado com sucesso! \n");
-        } catch (Exception ex) {
-          ex.printStackTrace();
-        }
+      } catch (Exception ex) {
+        ex.printStackTrace();
+      }
   }
 
   public static void listar(String option) {
