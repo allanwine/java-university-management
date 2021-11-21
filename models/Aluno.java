@@ -1,7 +1,6 @@
 package models;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import interfaces.Cadastravel;
 import utils.CadastroUtil;
@@ -20,7 +19,7 @@ public class Aluno extends PessoaFisica implements Cadastravel, Serializable {
     String email,
     String cpf,
     String nome,
-    LocalDate dataNascimento,
+    String dataNascimento,
     String curso,
     String modalidade,
     String periodo,

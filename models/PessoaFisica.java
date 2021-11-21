@@ -1,11 +1,9 @@
 package models;
 
-import java.time.LocalDate;
-
 public class PessoaFisica extends Pessoa {
   private String cpf;
   private String nome;
-  private LocalDate dataNascimento;
+  private String dataNascimento;
   private String genero;
 
 
@@ -15,7 +13,7 @@ public class PessoaFisica extends Pessoa {
     String email,
     String cpf,
     String nome,
-    LocalDate dataNascimento,
+    String dataNascimento,
     String telefone
     ) {
     super(endereco, cep, email, telefone);
@@ -33,7 +31,7 @@ public class PessoaFisica extends Pessoa {
     return this.nome;
   }
 
-  public LocalDate getDataNascimento() {
+  public String getDataNascimento() {
     return this.dataNascimento;
   }
 
@@ -49,7 +47,7 @@ public class PessoaFisica extends Pessoa {
     this.nome = nome;
   }
 
-  public void setDataNascimento(LocalDate dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 

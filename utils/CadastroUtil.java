@@ -18,12 +18,13 @@ public class CadastroUtil {
         break;
 
       default:
-      break;
+      return;
     }
         try {
         Path path = Paths.get(filePath);
         if (!Files.exists(path)) Files.createFile(path);
         Files.write(path, object.toString().getBytes(), StandardOpenOption.APPEND);
+        System.out.println("Cadastro realizado com sucesso! \n");
         } catch (Exception ex) {
           ex.printStackTrace();
         }
@@ -43,10 +44,11 @@ public class CadastroUtil {
         break;
 
       default:
-      break;
+      return;
     }
       try {
         Path path = Paths.get(filePath);
+        if (!Files.exists(path)) Files.createFile(path);
         List<String> fileLines = Files.readAllLines(path);
 
         for (String line : fileLines) {
